@@ -1,0 +1,25 @@
+plugins {
+	id 'java'
+	id 'application'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
+}
+
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+}
+
+
+application {
+    // Define the main class for the application.
+    mainClass = 'project.Main'
+}
